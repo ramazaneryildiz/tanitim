@@ -1,0 +1,189 @@
+:root {
+  --paper: #efe6d6;
+  --ink: #241910;
+  --muted: #6d5848;
+  --line: #d8cbb6;
+  --clay: #8c3b28;
+  --block: #2a211b;
+  --cream: #f7f1e6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(140, 59, 40, 0.08), transparent 32rem),
+    var(--paper);
+  font-family: "Outfit", sans-serif;
+  font-weight: 380;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+}
+
+.top,
+main,
+footer {
+  width: min(1080px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 0 0.4rem;
+}
+
+.mark {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-weight: 620;
+  letter-spacing: 0.08em;
+}
+
+.ig {
+  text-decoration: none;
+  border-bottom: 1px solid var(--clay);
+  padding-bottom: 0.1rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  gap: 3.5rem;
+  align-items: end;
+  padding: 3.2rem 0 4rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.portrait {
+  aspect-ratio: 4 / 5;
+  background: var(--block);
+  color: var(--cream);
+  display: grid;
+  place-items: center;
+  font-family: "Fraunces", serif;
+  font-size: 4.5rem;
+  font-weight: 500;
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.eyebrow {
+  margin: 0 0 0.8rem;
+  color: var(--clay);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: clamp(4.2rem, 9vw, 7.4rem);
+  line-height: 0.86;
+  letter-spacing: -0.04em;
+}
+
+.role {
+  margin: 1.4rem 0 0.4rem;
+  font-size: 1.25rem;
+}
+
+.lede,
+.about p,
+.work p,
+.contact p {
+  color: var(--muted);
+  max-width: 38rem;
+}
+
+.about,
+.work,
+.contact {
+  padding: 3.2rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+h2 {
+  margin: 0 0 1rem;
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+ol {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+
+li {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+li span {
+  color: var(--clay);
+  font-family: "Fraunces", serif;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 520;
+}
+
+.work p,
+.contact p {
+  margin: 0.25rem 0 0;
+}
+
+.mail {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+footer {
+  padding: 1.4rem 0 2rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .portrait {
+    width: min(16rem, 70%);
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+}
